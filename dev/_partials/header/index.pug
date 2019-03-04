@@ -1,46 +1,36 @@
 header.header
     .top-menu
         .container
-            .auth
-                a.auth__login Вход
-            .price
-                a.price__list Прайс-лист
-    .header-center
-        .container
-            .burger
-                i.fas fa-bars
-            a.logo(href="/")
-                img.logo__img(src="/img/Component.png" alt="logo")
-            .header-center-text Отправляем по всей России любой транспортной компанией
-            .header-center__contact
-                a.tel-feedback(href="tel:+73852779483")
-                span.tel-feedback__number
-                a.mail-feedback(href="azpi@22bk.ru") azpi@22bk.ru
-            form.form-search
-            input.form-search__input(type="search" name="q" placeholder="Поиск по артикулу")
-            button.form-search__submit(type="submit")
-                i.fas fa-search
-            a.basket(href="#")
-            .basket__icon
-                i.fas fa-shopping-cart
-            .basket__product В корзине 50 товаров
+            .top-menu
+                select.currency
+                    option(value="USD") USD
+                    option(value="EUR") EUR 
+                    option(value="GBP") GBP
+                select.lang
+                    option(value="English") English
+                    option(value="Deutsch") Deutsch 
+                    option(value="French") French
+                select.help
+                    option(value="") 
+                    option(value="") 
+                    option(value="") 
+                .auth
+                    a.auth__login Login
+                    .registration
+                        a.registration Register 
+                    .burger    
+            .header-center
+                .header-center__сontact
+                    a.tel-feedback(href="tel:23003560222")
+                        span.tel-feedback__number
+                            |2300&nbsp;-&nbsp;3560&nbsp;-&nbsp;222
+                    a.logo(href="/") 
+                        img.logo__img(src="/img/logo.png" alt="logo")
+                    a.basket(href="#")
+                        .basket__icon
+                            span.basket__count 0
             .service-menu
-            .container
-                ul.service-menu__list
-                    li.service-menu__item
-                        a.service-menu__link
-                    li.service-menu__item
-                         a.service-menu__link
-                    li.service-menu__item
-                         a.service-menu__link
-                    li.service-menu__item
-                        a.service-menu__link
-                    li.service-menu__item
-                        a.service-menu__link
-                     li.service-menu__item
-                        a.service-menu__link
-                    li.service-menu__item
-                        a.service-menu__link
-                    li.service-menu__item
-                        a.service-menu__link
+                .container
+                    select.menu-select
+                        option(selected="Select a category") Select a category
 
