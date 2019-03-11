@@ -1,5 +1,4 @@
 header.header
-    .top-menu
         .container
             .top-menu
                 select.currency
@@ -17,20 +16,37 @@ header.header
                 .auth
                     a.auth__login Login
                     .registration
-                        a.registration Register 
-                    .burger    
+                        a.registration Register
+                    .burger
             .header-center
-                .header-center__сontact
-                    a.tel-feedback(href="tel:23003560222")
-                        span.tel-feedback__number
-                            |2300&nbsp;-&nbsp;3560&nbsp;-&nbsp;222
-                    a.logo(href="/") 
-                        img.logo__img(src="/img/logo.png" alt="logo")
-                    a.basket(href="#")
-                        .basket__icon
-                            span.basket__count 0
-            .service-menu
-                .container
+                .container.container-header-center
+                    .header-center__contact
+                        a.tel-feedback(href="tel:23003560222")
+                            i.fas.fa-mobile-alt
+                            span.tel-feedback__number
+                                |2300&nbsp;-&nbsp;3560&nbsp;-&nbsp;222
+                        a.logo(href="/") 
+                            img.logo__img(src="/img/logo.png" alt="logo")
+                        a.basket(href="#")
+                            .basket__icon
+                             span.basket__count 0
+                .service-menu
+                .container.container-service-menu
                     select.menu-select
                         option(selected="Select a category") Select a category
-
+                    .header-center__search
+                        form.form-search(action="" method="") 
+                            input.form-search__input(name="" type="search" placeholder="Search products...")
+                            i.fas.fa-search
+                    ul.service-menu
+                        li.service-menu__item
+                            a.service-menu__link(href="#") home 
+                        li.service-menu__item
+                            a.service-menu__link(href="#") furniture
+                        li.service-menu__item
+                            a.service-menu__link(href="#") chair 
+                        li.service-menu__item
+                            a.service-menu__link(href="#") table 
+                        li.service-menu__item
+                            a.service-menu__link(href="#") sofa  
+                  
