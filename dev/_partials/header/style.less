@@ -2,19 +2,35 @@
   background-color: @eclipse;
 }
 
-//.container {
-//max-width: 1140px;
-//}
+
 
 .top-menu {
-  padding: 15px 15px;
   background-color: @charcoal;
+
+  & .container {
+    .clearfix();
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  &__left {
+    .col-item(2);
+  }
+
+  &__right {
+    .col-item(2);
+    display: flex;
+    justify-content: flex-end;
+  }
 }
+
 .currency {
   position: relative;
   font-family: "poppins-medium";
   font-size: 16px;
   color: @white;
+  background-color: @charcoal;
   cursor: pointer;
 
   &::before {
@@ -32,6 +48,7 @@
   font-family: "poppins-medium";
   font-size: 16px;
   color: @white;
+  background-color: @charcoal;
   cursor: pointer;
 
   &::before {
@@ -49,27 +66,25 @@
   font-family: "poppins-medium";
   font-size: 16px;
   color: @white;
+  background-color: @charcoal;
   cursor: pointer;
 }
+
 .auth {
   display: inline-block;
-  position: absolute;
-  right: 0;
-  cursor: pointer;
-}
-.auth__login {
-  display: inline-block;
   position: relative;
+  padding-left: 20px;
   font-size: 13px;
   font-family: "poppins-medium";
   color: @white;
+  text-decoration: none;
 
   &::before {
     content: "";
     position: absolute;
     height: 16px;
     width: 16px;
-    // margin-left: -20px;
+    left: 0;
     background-image: url(../img/login.png);
     background-repeat: no-repeat;
   }
@@ -78,53 +93,96 @@
 .registration {
   display: inline-block;
   position: relative;
+  padding-left: 20px;
   font-size: 13px;
   font-family: "poppins-medium";
   color: @white;
+  text-decoration: none;
+  margin-left: 40px;
 
   &::before {
     content: "";
     position: absolute;
     height: 16px;
     width: 16px;
-    //margin-left: -20px;
+    left: 0;
     background-image: url(../img/register.png);
     background-repeat: no-repeat;
   }
 }
 
-.container-header-center {
-  display: flex;
-  justify-content: space-between;
-  height: 106px;
-  align-items: center;
-  padding: 30px 15px;
-}
+.header-center {
+  & .container {
+    .clearfix();
+    padding: 30px 0;
+  }
 
-.header-center__contact {
-  position: relative;
+  &__contact {
+    .col-item(3);
+  }
+
+  &__logo {
+    .col-item(3);
+    text-align: center;
+  }
+
+  &__basket {
+    .col-item(3);
+  }
 }
 
 .tel-feedback {
   font-size: 17px;
   text-decoration: none;
-  width: 165px;
   color: @gainsboro;
   font-family: "poppins-semibold";
+
+  & i {
+    font-size: 44px;
+    color: rgb(213, 142, 50);
+
+  }
 }
 
 .logo {
-  max-width: 195px;
+  display: inline-block;
+  max-width: 170px;
+
   &__img {
     width: 100%;
   }
 }
 
 .service-menu {
-  display: inline-flex;
+  height: 85px;
+  background-color: @white;
+  box-shadow: 0px 4px 6px 0px rgba(1, 2, 2, 0.2);
+
+  & .container {
+    .clearfix();
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__left {
+    .col-item(2);
+  }
+
+  &__right {
+    .col-item(2);
+    text-align: right;
+    height: 100%;
+  }
+
+  &__list {
+    height: 100%;
+  }
 
   &__item {
+    display: inline-block;
     list-style-type: none;
+    height: 100%;
   }
 
   &__link {
@@ -132,32 +190,25 @@
     text-transform: uppercase;
     font-size: 14px;
     font-family: "poppins-semibold";
-    padding-left: 35px;
+    display: inline-block;
+    height: 100%;
+    line-height: 85px;
+    padding: 0 20px;
 
     &:hover {
-      color: @dark-blue;
+      background-color: rgb(213, 142, 50)
     }
+  }
+
+  &__search {
+    display: inline-block;
   }
 }
 
-.Rectangle_109 {
-  background-color: rgb(213, 142, 50);
-  position: absolute;
-  left: 975px;
-  top: 198px;
-  width: 75px;
-  height: 84px;
-  z-index: 774;
-}
-
-.container-service-menu {
-  padding: 20px 15px;
-  background-color: @white;
-  box-shadow: 0px 4px 6px 0px rgba(1, 2, 2, 0.2);
-}
 
 .menu-select {
   display: inline-block;
+  vertical-align: top;
   width: 213px;
   height: 45px;
   font-size: 14px;
@@ -166,9 +217,6 @@
   border: 1px solid rgb(42, 42, 42);
 }
 
-.header-center__search {
-  display: inline-block;
-}
 
 .form-search {
   &__input {
