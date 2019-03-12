@@ -1,22 +1,22 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 // Mixins
 
 .clearfix {
-    &:after {
-        display: table;
-        clear: both;
-        content: '';
-    }
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
 }
 
 // Colors
@@ -26,24 +26,24 @@
 @gainsboro: rgb(216, 216, 216);
 @dark-gray: rgb(164, 164, 164);
 @nero: rgb(42, 42, 42);
-
-
-
+@fuel-yellow: rgb(213, 142, 50);
+@hawkes-blue: rgb(224, 227, 237);
+@gray: rgb(169, 169, 169);
 
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .col-item(@count: 12) {
-    width:~"calc((100% - 30px * @{count}) / @{count})";
-    margin-right: 15px;
-    margin-left: 15px;
-    float: left;
+  width: ~"calc((100% - 30px * @{count}) / @{count})";
+  margin-right: 15px;
+  margin-left: 15px;
+  float: left;
 }
 
 .col-template {
-    background: blue;
-    opacity: .25;
-    height: 80px;
+  background: blue;
+  opacity: 0.25;
+  height: 80px;
 }

@@ -2,8 +2,6 @@
   background-color: @eclipse;
 }
 
-
-
 .top-menu {
   background-color: @charcoal;
 
@@ -119,15 +117,48 @@
 
   &__contact {
     .col-item(3);
+    display: flex;
+    align-items: center;
   }
 
   &__logo {
     .col-item(3);
-    text-align: center;
+    text-align: left;
   }
 
   &__basket {
     .col-item(3);
+    text-align: right;
+  }
+}
+.basket {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  z-index: 1;
+  &__icon {
+    position: absolute;
+    width: 51px;
+    height: 49px;
+    background-color: @fuel-yellow;
+    border-radius: 3px;
+    & i {
+      color: @white;
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+
+  &__count {
+    position: absolute;
+    border-radius: 50%;
+    background-color: @eclipse;
+    width: 28px;
+    height: 29px;
+    font-size: 14px;
+    font-family: "poppins-medium";
+    color: @hawkes-blue;
+    z-index: 3;
   }
 }
 
@@ -138,9 +169,9 @@
   font-family: "poppins-semibold";
 
   & i {
-    font-size: 44px;
-    color: rgb(213, 142, 50);
-
+    padding-right: 15px;
+    font-size: 22px;
+    color: @fuel-yellow;
   }
 }
 
@@ -194,9 +225,12 @@
     height: 100%;
     line-height: 85px;
     padding: 0 20px;
+    color: @nero;
 
     &:hover {
-      background-color: rgb(213, 142, 50)
+      border-top: 2px solid @eclipse;
+      background-color: @fuel-yellow;
+      color: @white;
     }
   }
 
@@ -204,7 +238,6 @@
     display: inline-block;
   }
 }
-
 
 .menu-select {
   display: inline-block;
@@ -216,7 +249,6 @@
   font-family: "poppins-regular";
   border: 1px solid rgb(42, 42, 42);
 }
-
 
 .form-search {
   &__input {
