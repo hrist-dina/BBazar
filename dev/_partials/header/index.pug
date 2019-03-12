@@ -30,9 +30,8 @@ header.header
                     img.logo__img(src="/img/logo.png" alt="logo")
             .header-center__basket
                 a.basket(href="#")
-                    .basket__icon
-                        i.fas.fa-shopping-basket
-                    .basket__count 0
+                    i.basket__icon.fas.fa-shopping-basket
+                    .basket__count 150
     .service-menu
         .container
             .service-menu__left
@@ -40,8 +39,9 @@ header.header
                     option(selected="Select a category") Select a category
                 .service-menu__search
                     form.form-search(action="" method="") 
-                        input.form-search__input(name="" type="search" placeholder="Search products...")
-                        i.fas.fa-search
+                        input.form-search__input(name="q" type="search" placeholder="Search products...")
+                        button.form-search__button
+                            i.fas.fa-search
             .service-menu__right
                 ul.service-menu__list
                     li.service-menu__item

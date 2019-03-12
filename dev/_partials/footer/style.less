@@ -12,20 +12,38 @@
 }
 
 .lower-menu {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 155px;
-  height: 160px;
+  width: 100%;
+
+  &__title {
+    list-style-type: none;
+    .col-item(3);
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: "poppins-semibold";
+    color: rgb(255, 255, 255);
+  }
+
+
+  &__list {
+    margin-top: 25px;
+  }
+
 
   &__item {
     list-style-type: none;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
   }
 
   &__link {
+
     font-family: "poppins-regular";
     font-size: 14px;
-    color: @white;
+    color: @gray;
     text-decoration: none;
   }
 }
@@ -34,9 +52,29 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background: @nero;
+
+  & .container {
+    .clearfix();
+  }
+
+  &__left {
+    .col-item(4);
+    height: 1px;
+  }
+
+  &__center {
+    .col-item(4);
+    text-align: center;
+  }
+
+  &__right {
+    .col-item(4);
+    text-align: right;
+  }
+
 }
 
-.copyright__title {
+.copyright {
   font-size: 14px;
   font-family: "poppins-regular";
   color: @gray;

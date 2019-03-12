@@ -36,7 +36,9 @@
 }
 
 .col-item(@count: 12) {
-  width: ~"calc((100% - 30px * @{count}) / @{count})";
+  //width: ~"calc(((100% - 30px * @{count}) / 12) * @{count})";
+  @width: percentage(@count/12);
+  width:~"calc(@{width} - 30px)";
   margin-right: 15px;
   margin-left: 15px;
   float: left;
