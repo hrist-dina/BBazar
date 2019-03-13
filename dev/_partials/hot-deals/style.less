@@ -1,5 +1,116 @@
 .hot-deals {
-    .col-item(4);
-    background-color: green;
-    height: 200px;
+  position: relative;
+  height: 506px;
+  border: 1px solid rgb(226, 226, 226);
+
+  .col-item(4);
+  background-color: @white;
+  height: 200px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-family: "poppins-semibold";
+    background-color: @nero;
+    width: 360px;
+    height: 50px;
+    font-size: 20px;
+    color: @white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &-circle-list {
+    display: inline-block;
+  }
+
+  &__circle {
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: @gainsboro;
+    width: 13px;
+    height: 13px;
+
+    &:first-child {
+      background-color: @fuel-yellow;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    background-color: @nero;
+    width: 132px;
+    height: 37px;
+    font-size: 13px;
+    font-family: "poppins-semibold";
+    color: @white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  &__icon {
+    padding-right: 5px;
+  }
+
+  &-time-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__time {
+    margin-top: 75px;
+    padding: 10px;
+    margin-right: 5px;
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    background-color: @nero;
+    font-size: 20px;
+    font-family: "poppins-semibold";
+    color: @white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__h3 {
+    font-size: 16px;
+    font-family: "poppins-semibold";
+    color: @nero;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &-star-rating {
+    & i {
+      font-size: 16px;
+      color: @nero;
+      position: absolute;
+    }
+  }
+
+  &-price__old {
+    font-size: 14px;
+    font-family: "poppins-regular";
+    color: @dark-gray;
+    text-decoration: line-through;
+  }
+
+  &-new__price {
+    background-color: @nero;
+    width: 95px;
+    height: 37px;
+    font-size: 18px;
+    color: @white;
+    font-family: "poppins-semibold";
+    padding: 10px 12px;
+  }
 }

@@ -23,11 +23,9 @@
     color: rgb(255, 255, 255);
   }
 
-
   &__list {
     margin-top: 25px;
   }
-
 
   &__item {
     list-style-type: none;
@@ -36,11 +34,9 @@
     &:last-child {
       margin-bottom: 0;
     }
-
   }
 
   &__link {
-
     font-family: "poppins-regular";
     font-size: 14px;
     color: @gray;
@@ -72,8 +68,26 @@
     text-align: right;
   }
 
+  &-social {
+  }
 }
 
+.social {
+  &__item {
+    display: inline-block;
+    list-style-type: none;
+  }
+
+  &__link {
+    cursor: pointer;
+  }
+  &__img {
+    padding-right: 25px;
+    &:hover {
+      background-color: @fuel-yellow;
+    }
+  }
+}
 .copyright {
   font-size: 14px;
   font-family: "poppins-regular";

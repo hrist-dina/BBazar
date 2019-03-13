@@ -1,4 +1,48 @@
 .slider {
-    .col-item(8);
-    background-color: red;
+  position: relative;
+  .col-item(8);
+  background-color: rgb(204, 204, 204);
+  width: 751px;
+  height: 505px;
+
+  &__info {
+    position: absolute;
+    background-color: @charcoal;
+    width: 751px;
+    height: 214px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    padding: 75px 110px 40px 110px;
+  }
+
+  &__title {
+    font-size: 46px;
+    font-family: "poppins-regular";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-family: "poppins-light";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: rgb(42, 42, 42);
+    text-transform: uppercase;
+    font-family: "poppins-semibold";
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    width: 136px;
+    height: 54px;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+  }
 }
