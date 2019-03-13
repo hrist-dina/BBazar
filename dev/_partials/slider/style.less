@@ -1,48 +1,63 @@
 .slider {
-  position: relative;
-  .col-item(8);
-  background-color: rgb(204, 204, 204);
-  width: 751px;
-  height: 505px;
+    .col-item(8);
+    height: 505px;
 
-  &__info {
-    position: absolute;
-    background-color: @charcoal;
-    width: 751px;
-    height: 214px;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    padding: 75px 110px 40px 110px;
-  }
 
-  &__title {
-    font-size: 46px;
-    font-family: "poppins-regular";
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-  }
+    &__item {
+        list-style-type: none;
+        display: inline-block;
+        position: relative;
 
-  &__text {
-    font-size: 24px;
-    font-family: "poppins-light";
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-  }
+        & img {
+            width: 100%;
+        }
+    }
 
-  &__link {
-    font-size: 14px;
-    color: rgb(42, 42, 42);
-    text-transform: uppercase;
-    font-family: "poppins-semibold";
-    border-radius: 3px;
-    background-color: rgb(255, 255, 255);
-    width: 136px;
-    height: 54px;
-    text-decoration: none;
-    padding: 20px;
-    text-align: center;
-  }
+    &__info {
+        position: absolute;
+        background-color: ~"rgba(0, 0, 0, .5)";
+        width: 100%;
+        height: 214px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        padding: 75px 110px 40px 110px;
+    }
+
+    &__title {
+        font-size: 46px;
+        font-family: "poppins-regular";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-family: "poppins-light";
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+    }
+
+    &__link {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: -27px;
+        margin: auto;
+        font-size: 14px;
+        color: rgb(42, 42, 42);
+        text-transform: uppercase;
+        font-family: "poppins-semibold";
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        width: 136px;
+        height: 54px;
+        text-decoration: none;
+        padding: 20px;
+        text-align: center;
+
+    }
 }
