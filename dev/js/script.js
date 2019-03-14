@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   // Slick slider
   var slickSlider = $(".js-slider");
   if (slickSlider.length > 0) {
@@ -6,8 +6,10 @@ $(document).ready(function () {
       dots: false,
       infinite: true,
       slidesToShow: 1,
-      prevArrow: '<i class="fas fa-angle-left"></i>',
-      nextArrow: '<i class="fas fa-angle-right"></i>'
+      prevArrow:
+        '<div class="slider__arrow-left"><i class="fas fa-angle-left"></i></div>',
+      nextArrow:
+        '<div class="slider__arrow-right"><i class="fas fa-angle-right"></i></div>'
       /*responsive: [
              {
              settings: {

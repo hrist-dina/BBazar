@@ -1,7 +1,7 @@
 .hot-deals {
   position: relative;
   height: 506px;
-  border: 1px solid rgb(226, 226, 226);
+  border: 1px solid @gainsboro;
   .col-item(4);
   background-color: @white;
 
@@ -123,12 +123,12 @@
     position: relative;
     height: 1px;
     width: 100%;
-    background-color: rgb(42, 42, 42);
+    background-color: @nero;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
-      background-color: rgb(213, 142, 50);
+      background-color: @fuel-yellow;
       width: 30px;
       height: 4px;
       top: 0;
@@ -136,7 +136,6 @@
       left: 0;
       right: 0;
       margin: auto;
-
     }
   }
 
@@ -177,13 +176,13 @@
   &__symbol {
     display: inline-flex;
     font-size: 16px;
-    border: 1px solid rgb(42, 42, 42);
+    border: 1px solid @nero;
     width: 35px;
     height: 35px;
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    color: rgb(42, 42, 42);
+    color: @nero;
     margin-right: 5px;
   }
 }
