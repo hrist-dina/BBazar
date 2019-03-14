@@ -1,43 +1,96 @@
 .info {
-  position: relative;
-  margin-top: 30px;
-  width: 261px;
-  height: 119px;
-  border: 1px solid @pink-swan;
-  padding: 20px 60px;
+  margin-top: 70px;
 
-  &-menu__title {
-    font-size: 28px;
-    color: @nero;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: "poppins-semibold";
+
+  &-menu {
+    .clearfix();
+
+    &__item {
+      position: relative;
+      .col-item(3);
+      background-color: @white;
+      border: 1px solid @pink-swan;
+      padding: 50px 20px 20px 20px;
+      list-style-type: none;
+    }
+
+
+    &__item:hover &__icon {
+      border-color: @fuel-yellow;
+    }
+
+    &__item:hover &__icon-inner {
+      background-color: @fuel-yellow;
+      border-color: @fuel-yellow;
+
+      & i {
+        color: @white;
+      }
+    }
+
+    &__item:hover &__title,
+    &__item:hover &__sub-title {
+      color: rgb(224, 163, 142);
+
+    }
+
+
+    &__icon {
+      position: absolute;
+      border: 1px solid @pink-swan;
+      background-color: @white;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      text-align: center;
+      left: 0;
+      right: 0;
+      top: -37px;
+      bottom: auto;
+      margin: auto;
+
+      &-inner {
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid @pink-swan;
+        background-color: @white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        text-align: center;
+
+      }
+
+      & i {
+        display: block;
+        font-size: 26px;
+        color: @nero;
+      }
+
+    }
+
+    &__title,
+    &__sub-title {
+      font-size: 28px;
+      color: @nero;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &__title {
+      font-family: "poppins-semibold";
+    }
+
+    &__sub-title {
+      font-family: "poppins-regular";
+    }
   }
-
-  &-menu__link {
-    font-size: 28px;
-    color: @nero;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: "poppins-regular";
-  }
-}
-
-.fas.fa-truck {
-  background-color: #ffffff;
-  position: absolute;
-  border-radius: 50%;
-  font-size: 26px;
-  color: @nero;
-  text-transform: uppercase;
-  border: 1px solid @pink-swan;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  padding: 18px;
-  left: 0;
-  right: 0;
-  top: -35px;
-  bottom: auto;
-  margin: auto;
 }

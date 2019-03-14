@@ -1,0 +1,87 @@
+.information2 {
+    margin-top: 70px;
+
+    &-menu {
+        .clearfix();
+    }
+
+    &__item {
+        .col-item(3);
+        position: relative;
+        background-color: @white;
+        border: 1px solid rgb(183, 183, 183);
+        list-style-type: none;
+        padding: 70px 20px 20px 20px;
+    }
+
+    &__item:hover &__icon {
+        border-color: @fuel-yellow;
+
+    }
+
+    &__item:hover &__inner {
+        background-color: @fuel-yellow;
+        border-color: @fuel-yellow;
+
+        & i {
+            color: @white;
+        }
+    }
+
+    &__icon {
+        font-size: 26px;
+        color: rgb(42, 42, 42);
+        text-transform: uppercase;
+        position: absolute;
+        top: -35px;
+        bottom: auto;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid rgb(183, 183, 183);
+        width: 74px;
+        height: 74px;
+        background-color: #fff;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid rgb(183, 183, 183);
+        text-align: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background-color: #fff;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-family: "poppins-semibold";
+        color: rgb(42, 42, 42);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__sub-title {
+        font-size: 28px;
+        font-family: "poppins-regular";
+        color: rgb(42, 42, 42);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__item:hover &__title,
+    &__item:hover &__sub-title {
+        color: rgb(224, 163, 142);
+    }
+}
