@@ -1,8 +1,25 @@
 section.catalog-main
     .container
-            h2.catalog-main__h2 new furniture
-        .catalog-main__line
-            .catalog-main-circle__list
-                span.catalog-main__circle 
-                span.catalog-main__circle 
-                span.catalog-main__circle 
+        .section-line
+            .section-line__inner
+                h2.section-line__title  new furniture
+                ul.tabs
+                    li.tabs__item
+                        a.tabs__link(href="#") Bed
+                    li.tabs__item
+                        a.tabs__link(href="#") Chair
+                    li.tabs__item
+                        a.tabs__link(href="#") Sofa
+                    li.tabs__item
+                        a.tabs__link(href="#") Table
+                    li.tabs__item
+                        a.tabs__link(href="#") Dining
+            .section-line__hr
+                .circle-list
+                    span.circle-item 
+                    span.circle-item 
+                    span.circle-item 
+        include ../card-list/index
+
+
+

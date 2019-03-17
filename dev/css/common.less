@@ -39,7 +39,7 @@
 .col-item(@count: 12) {
   //width: ~"calc(((100% - 30px * @{count}) / 12) * @{count})";
   @width: percentage(@count / 12);
-  width: ~"calc(@{width} - 30px)";
+  width:~"calc(@{width} - 30px)";
   margin-right: 15px;
   margin-left: 15px;
   float: left;
@@ -49,4 +49,116 @@
   background: blue;
   opacity: 0.25;
   height: 80px;
+}
+
+
+.circle-list {
+  display: inline-block;
+}
+
+.circle-item {
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: @gainsboro;
+  width: 13px;
+  height: 13px;
+
+  &:first-child {
+    background-color: @fuel-yellow;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.section-line {
+  position: relative;
+
+  &__inner {
+    padding-bottom: 5px;
+    .clearfix();
+  }
+
+
+  &__hr {
+    position: absolute;
+    bottom: 0;
+    .col-item();
+    font-size: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+    & .circle-list {
+      align-self: flex-end;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      background-color: @fuel-yellow;
+      width: 44px;
+      height: 3px;
+      z-index: 1;
+    }
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      background-color: rgb(226, 226, 226);
+      width: ~"calc(100% - 90px)";
+      height: 3px;
+      z-index: -1;
+    }
+
+  }
+
+  &__title {
+    .col-item(4);
+    display: inline-block;
+    align-self: flex-start;
+    font-family: "poppins-semibold";
+    font-size: 20px;
+    color: @fuel-yellow;
+    text-transform: uppercase;
+  }
+
+  & .tabs {
+    .col-item(8);
+  }
+}
+
+.tabs {
+  font-size: 0;
+  list-style-type: none;
+
+  &__item {
+    display: inline-block;
+    margin-right: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      border-bottom-color: @fuel-yellow;
+      z-index: 2;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-family: "poppins-medium";
+    color: rgb(42, 42, 42);
+    text-decoration: none;
+
+  }
 }

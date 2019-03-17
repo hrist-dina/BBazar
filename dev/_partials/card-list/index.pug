@@ -1,0 +1,47 @@
+mixin card (isSale=false, img, h3, rating, price, oldPrice)
+    .card
+        .card__top
+            - if (isSale) {
+            .card__sale 
+                span sale
+            - }
+            img.card__img(src=img alt="")
+            .card__actions-block
+                a.card__quick(href="#") Quick View 
+                a.card__add(href="#")
+                    i.fas.fa-shopping-basket 
+                    | add to cart  
+        .card__bottom 
+            h3.card__h3=h3
+            .card__star-rating
+                - for (let i = 0; i < 5; i++) {
+                    - if (i < rating) {
+                        i.fas.fa-star
+                    - } else {
+                        i.far.fa-star
+                    - }
+                - }
+            .card__line 
+            .card__inner
+                .card__left
+                    a.card__symbol(href="#")
+                        i.far.fa-heart
+                    a.card__symbol(href="#")
+                        i.fas.fa-exchange-alt
+                .card__right
+                    - if (oldPrice) {
+                    span.card__old-price=('$'+oldPrice)
+                    - }
+                   
+                    span.card__price=('$'+price)
+
+.card-list
+    +card(true, "https://source.unsplash.com/262x260/?furniture", "Aenean Ru Bristique", 2, '300.00')
+    +card(false, "https://source.unsplash.com/262x260/?furniture", "Aenean Ru Bristique 2", 3, '300.00', '350.00')
+    +card(true, "https://source.unsplash.com/262x260/?furniture", "Aenean Ru Bristique 3", 1, '300.00')
+    +card(false, "https://source.unsplash.com/262x260/?furniture", "Aenean Ru Bristique 4", 5, '300.00', '350.00')
+    +card(false, "https://source.unsplash.com/262x260/?furniture", "Aenean Ru Bristique 5", 4, '300.00', '350.00')
+    +card(false, "https://source.unsplash.com/262x260/?furniture", "Aenean Ru Bristique 5", 4, '300.00', '350.00')
+    +card(true, "https://source.unsplash.com/262x260/?furniture", "Aenean Ru Bristique 5", 1, '300.00', '350.00')
+    +card(false, "https://source.unsplash.com/262x260/?furniture", "Aenean Ru Bristique 5", 4, '300.00', '350.00')
+    
