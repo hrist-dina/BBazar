@@ -1,0 +1,125 @@
+.gallery {
+  .clearfix();
+
+  &-left {
+    .col-item(6);
+  }
+
+  &__title {
+    font-size: 20px;
+    color: rgb(213, 142, 50);
+    font-family: "poppins-semibold";
+    text-transform: uppercase;
+  }
+
+  &__hr {
+    position: relative;
+    background-color: rgb(226, 226, 226);
+    height: 3px;
+    width: 100%;
+    margin-top: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: @fuel-yellow;
+      width: 30px;
+      height: 4px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: auto;
+      margin: auto;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 6px 0px rgba(1, 2, 2, 0.24);
+    padding: 35px;
+    width: 249px;
+    height: 106px;
+    top: auto;
+    bottom: 45px;
+    left: auto;
+    right: 0;
+    margin: auto;
+  }
+
+  &__h3 {
+    font-size: 16px;
+    font-family: "poppins-semibold";
+    color: rgb(42, 42, 42);
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__star-rating {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &-value {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(42, 42, 42);
+    opacity: 0.6;
+    width: 105px;
+    height: 105px;
+    padding: 30px 15px;
+    top: 0;
+    bottom: auto;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  &-price__old {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: line-through;
+  }
+
+  &__price {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: "poppins-semibold";
+    text-transform: uppercase;
+  }
+
+  &-right {
+    .col-item(6);
+  }
+
+  &-text {
+    font-size: 18px;
+    font-family: "poppins-semibold";
+    color: rgb(42, 42, 42);
+    text-transform: uppercase;
+  }
+}
+
+.tabs-gallery {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 30px;
+
+  &__item {
+    font-size: 18px;
+    font-family: "poppins-semibold";
+    color: rgb(42, 42, 42);
+    text-transform: uppercase;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
