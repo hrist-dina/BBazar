@@ -7,14 +7,14 @@
 
   &__title {
     font-size: 20px;
-    color: rgb(213, 142, 50);
+    color: @fuel-yellow;
     font-family: "poppins-semibold";
     text-transform: uppercase;
   }
 
   &__hr {
     position: relative;
-    background-color: rgb(226, 226, 226);
+    background-color: @gainsboro;
     height: 3px;
     width: 100%;
     margin-top: 10px;
@@ -35,7 +35,7 @@
 
   &__description {
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    background-color: @white;
     box-shadow: 0px 3px 6px 0px rgba(1, 2, 2, 0.24);
     padding: 35px;
     width: 249px;
@@ -45,7 +45,6 @@
     left: auto;
     right: 2px;
     margin: auto;
-
 
     &::before,
     &::after {
@@ -58,25 +57,24 @@
     }
 
     &::before {
-      border-left: 20px solid rgb(42, 42, 42);
-      border-top: 20px solid rgb(42, 42, 42);
+      border-left: 20px solid @nero;
+      border-top: 20px solid @nero;
       top: 0;
       left: 0;
     }
 
     &::after {
-      border-right: 20px solid rgb(42, 42, 42);
-      border-bottom: 20px solid rgb(42, 42, 42);
+      border-right: 20px solid @nero;
+      border-bottom: 20px solid @nero;
       right: 0;
       bottom: 0;
     }
   }
 
-
   &__h3 {
     font-size: 16px;
     font-family: "poppins-semibold";
-    color: rgb(42, 42, 42);
+    color: @nero;
     text-align: center;
   }
 
@@ -89,15 +87,13 @@
     text-align: center;
   }
 
-
-
   &__value {
     position: absolute;
     display: flex;
     justify-content: center;
     flex-direction: column;
     border-radius: 50%;
-    background-color: rgb(42, 42, 42);
+    background-color: @nero;
     opacity: 0.6;
     width: 105px;
     height: 105px;
@@ -111,14 +107,14 @@
 
   &__price-old {
     font-size: 16px;
-    color: rgb(255, 255, 255);
+    color: @white;
     text-align: center;
     text-decoration: line-through;
   }
 
   &__price {
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: @white;
     font-family: "poppins-semibold";
     text-transform: uppercase;
   }
@@ -130,7 +126,7 @@
   &-text {
     font-size: 18px;
     font-family: "poppins-semibold";
-    color: rgb(42, 42, 42);
+    color: @nero;
     text-transform: uppercase;
   }
 
@@ -148,13 +144,39 @@
   }
 
   &__symbol {
-    border: 1px solid rgb(42, 42, 42);
+    border: 1px solid @nero;
     width: 35px;
     height: 35px;
     padding: 10px;
     margin-bottom: 7px;
-    color: rgb(42, 42, 42);
-    background-color: #fff;
+    color: @nero;
+    background-color: @white;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-family: "poppins-semibold";
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    border-radius: 3px;
+    background-color: rgb(121, 174, 48);
+    width: 136px;
+    height: 54px;
+    text-decoration: none;
+    padding: 15px 25px;
+  }
+
+  &__h2 {
+    font-size: 48px;
+    font-family: "poppins-semibold";
+    color: rgb(213, 142, 50);
+  }
+
+  &-price-info {
+    font-size: 20px;
+    color: rgb(121, 174, 48);
+    font-family: "poppins-semibold";
+    text-transform: uppercase;
   }
 }
 
@@ -163,12 +185,11 @@
   justify-content: space-between;
   list-style-type: none;
   margin-top: 30px;
-  border: 1px solid rgb(226, 226, 226);
+  border: 1px solid @gainsboro;
 
   &__item {
     padding: 15px 24px;
-    border-right: 1px solid rgb(226, 226, 226);
-
+    border-right: 1px solid @gainsboro;
 
     &:last-child {
       border-right: none;
@@ -176,9 +197,8 @@
 
     &.active {
       margin-top: -1px;
-      border-top: 3px solid rgb(213, 142, 50);
-      border-bottom: 2px solid #fff;
-
+      border-top: 3px solid @fuel-yellow;
+      border-bottom: 2px solid @white;
     }
   }
 
@@ -186,7 +206,7 @@
     text-decoration: none;
     font-size: 18px;
     font-family: "poppins-semibold";
-    color: rgb(42, 42, 42);
+    color: @nero;
     text-transform: uppercase;
   }
 }
