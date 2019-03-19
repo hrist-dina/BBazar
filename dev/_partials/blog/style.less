@@ -1,27 +1,39 @@
-.blog {
-  .clearfix();
-}
-
 .card-blog {
-  margin-top: 30px;
+  height: 600px;
   .col-item(4);
+
+  &-list {
+    margin-top: 30px;
+    .clearfix();
+  }
 
   &__description {
     background-color: rgb(255, 255, 255);
     width: 100%;
+    padding: 30px;
   }
 
   &__top {
     position: relative;
   }
 
-  &__top-inner {
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__top-wrap {
     position: absolute;
-    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 60px;
-    padding: 20px;
     bottom: 0;
+    padding: 0 30px;
+  }
+
+  &__top-inner {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 20px;
     z-index: 1;
   }
 
@@ -41,17 +53,19 @@
     font-size: 16px;
     font-family: "poppins-semibold";
     color: rgb(213, 142, 50);
-    text-align: center;
+    margin-bottom: 23px;
   }
 
   &__text {
     font-size: 14px;
     font-family: "poppins-regular";
     color: rgb(103, 103, 103);
+    line-height: 2;
+
   }
 
   &__link {
-    display: inline-block;
+    display: block;
     font-size: 16px;
     font-family: "poppins-semibold";
     color: rgb(255, 255, 255);
@@ -61,5 +75,7 @@
     height: 45px;
     text-decoration: none;
     padding: 17px 35px;
+    margin: auto;
+    margin-top: 40px;
   }
 }

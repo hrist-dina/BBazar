@@ -5,6 +5,7 @@
     .col-item(6);
   }
 
+
   &__title {
     font-size: 20px;
     color: @fuel-yellow;
@@ -80,6 +81,8 @@
 
   &__item {
     position: relative;
+    border: 1px solid rgb(226, 226, 226);
+    border-top: 0;
   }
 
   &__star-rating {
@@ -121,6 +124,7 @@
 
   &-right {
     .col-item(6);
+    position: relative;
   }
 
   &-text {
@@ -128,6 +132,7 @@
     font-family: "poppins-semibold";
     color: @nero;
     text-transform: uppercase;
+    margin-right: 5px;
   }
 
   &__inner-left {
@@ -154,16 +159,17 @@
   }
 
   &__link {
+    display: inline-block;
+    text-align: center;
     font-size: 14px;
     font-family: "poppins-semibold";
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     border-radius: 3px;
     background-color: rgb(121, 174, 48);
-    width: 136px;
-    height: 54px;
     text-decoration: none;
     padding: 15px 25px;
+    margin-top: 25px;
   }
 
   &__h2 {
@@ -172,11 +178,25 @@
     color: rgb(213, 142, 50);
   }
 
-  &-price-info {
-    font-size: 20px;
+  &__banner-price {
+    font-size: 45px;
     color: rgb(121, 174, 48);
     font-family: "poppins-semibold";
     text-transform: uppercase;
+  }
+
+  &__banner-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 70px 60px;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
   }
 }
 
