@@ -1,3 +1,7 @@
+.blog {
+  margin-top: 60px;
+}
+
 .card-blog {
   height: 600px;
   .col-item(4);
@@ -52,8 +56,12 @@
   &__title {
     font-size: 16px;
     font-family: "poppins-semibold";
-    color: rgb(213, 142, 50);
+    color: rgb(42, 42, 42);
     margin-bottom: 23px;
+
+    &:hover {
+      color: rgb(213, 142, 50);
+    }
   }
 
   &__text {
@@ -61,7 +69,6 @@
     font-family: "poppins-regular";
     color: rgb(103, 103, 103);
     line-height: 2;
-
   }
 
   &__link {
@@ -72,10 +79,17 @@
     text-align: center;
     background-color: rgb(42, 42, 42);
     width: 165px;
-    height: 45px;
     text-decoration: none;
     padding: 17px 35px;
     margin: auto;
     margin-top: 40px;
+
+    &:hover {
+      background-color: rgb(213, 142, 50);
+    }
   }
+}
+
+.section-line__hr {
+  margin-top: 10px;
 }
