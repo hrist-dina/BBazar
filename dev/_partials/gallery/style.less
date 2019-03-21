@@ -3,7 +3,7 @@
 
   &-left {
     .col-item(6);
-    border: 1px solid rgb(226, 226, 226);
+    border: 1px solid @gainsboro;
   }
 
   &__title {
@@ -81,7 +81,7 @@
 
   &__item {
     position: relative;
-    border: 1px solid rgb(226, 226, 226);
+    border: 1px solid @gainsboro;
     border-top: 0;
   }
 
@@ -159,8 +159,8 @@
     background-color: @white;
 
     &:hover {
-      border: 1px solid rgb(213, 142, 50);
-      color: rgb(213, 142, 50);
+      border: 1px solid @fuel-yellow;
+      color: @fuel-yellow;
     }
   }
 
@@ -170,10 +170,10 @@
 
   &-hint {
     display: none;
-    background-color: rgb(42, 42, 42);
+    background-color: @nero;
     padding: 9px;
     font-family: "poppins-regular";
-    color: rgb(255, 255, 255);
+    color: @white;
     font-size: 12px;
     text-align: center;
     width: 90px;
@@ -192,10 +192,10 @@
     text-align: center;
     font-size: 14px;
     font-family: "poppins-semibold";
-    color: rgb(255, 255, 255);
+    color: @white;
     text-transform: uppercase;
     border-radius: 3px;
-    background-color: rgb(121, 174, 48);
+    background-color: @lima;
     text-decoration: none;
     padding: 15px 25px;
     margin-top: 25px;
@@ -204,12 +204,12 @@
   &__h2 {
     font-size: 48px;
     font-family: "poppins-semibold";
-    color: rgb(213, 142, 50);
+    color: @fuel-yellow;
   }
 
   &__banner-price {
     font-size: 45px;
-    color: rgb(121, 174, 48);
+    color: @lima;
     font-family: "poppins-semibold";
     text-transform: uppercase;
   }
@@ -285,7 +285,7 @@
   &__arrow-left,
   &__arrow-right {
     position: absolute;
-    background-color: rgb(42, 42, 42);
+    background-color: @nero;
     width: 33px;
     height: 70px;
     z-index: 1;
@@ -300,10 +300,10 @@
       margin: auto;
       width: 6px;
       height: 11px;
-      color: #fff;
+      color: @white;
 
       &:hover {
-        color: rgb(213, 142, 50);
+        color: @fuel-yellow;
       }
     }
   }
