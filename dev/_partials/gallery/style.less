@@ -3,7 +3,6 @@
 
   &-left {
     .col-item(6);
-    border: 1px solid @gainsboro;
   }
 
   &__title {
@@ -169,6 +168,7 @@
   }
 
   &-hint {
+    position: relative;
     display: none;
     background-color: @nero;
     padding: 9px;
@@ -176,15 +176,24 @@
     color: @white;
     font-size: 12px;
     text-align: center;
-    width: 90px;
+    width: auto;
     height: 26px;
+    white-space: nowrap;
     position: absolute;
     z-index: 1;
-    right: 10px;
-    left: auto;
+    right: auto;
+    left: 40px;
     top: 0;
     bottom: 0;
     margin: auto;
+
+    &::before {
+      position: absolute;
+      width: 6px;
+      height: 12px;
+      border: 20px solid transparent;
+      border-right: 20px solid green;
+    }
   }
 
   &__link {
@@ -265,16 +274,16 @@
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid @gainsboro;
   }
 
   &__item {
     margin-top: 8px;
     margin-bottom: 8px;
     margin-right: 8px;
+    cursor: pointer;
   }
 
   &__img {
@@ -290,6 +299,9 @@
     height: 70px;
     z-index: 1;
     cursor: pointer;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 
     & i {
       position: absolute;
@@ -309,16 +321,10 @@
   }
 
   &__arrow-left {
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    left: 10px;
   }
 
   &__arrow-right {
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    right: 10px;
   }
 }
